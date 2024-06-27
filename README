@@ -1,0 +1,5 @@
+This project is for F&B to save their recipes.
+This website has two pages.
+Form page and Data page, in the form page you can fill in name of ingredients, measurement and cost price.
+In the data page you can see your recipes with the table.
+In the CSS I use element selector, id selector, and class selector.
