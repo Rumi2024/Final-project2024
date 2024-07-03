@@ -3,3 +3,25 @@ This website has two pages.
 Form page and Data page, in the form page you can fill in name of ingredients, measurement and cost price.
 In the data page you can see your recipes with the table.
 In the CSS I use element selector, id selector, and class selector.
+
+---
+
+NOTES FROM EDUCATOR
+
+This website project was assigned as part of a front-end Web development class.
+It makes use of web-standard HTML forms as a data submission method, while using the p5.js[1] library for rendering content in order to keep it simpler than DOM manipulation. This allowed students to focus on the fundamentals of HTTP requests and data manipulation in JavaScript.
+
+The project was built in an environment with a hosted server[2] which handles POST requests of multipart/form-data type and appends to a data store, after which it returns all items in JSON format upon a GET request to the same URL.
+For practicality and longevity purposes, the following files[3] have been added to mock this server functionality using Service Workers:
+- service-worker.js
+- register-service-worker.js
+
+In addition, the file p5.preloadxhr.js[4] was provided on the server as part of the learning environment, and has now been included. Its purpose is to make an asynchronous XMLHttpRequest act synchronously inside the preload() function (a special function called by the p5.js environment meant for loading assets).
+By having a synchronous XMLHttpRequest, it makes it possible to further call p5.js asset loading functions without worrying about callback functions (as would be required if the scope calling the asset loading functions were outside of the preload function).
+
+service-worker.js, register-service-worker.js, p5.preloadxhr.js and this section of the README are Copyright 2024 Keith Toh. Subject to the MIT license.
+
+[1]: https://p5js.org
+[2]: https://gist.github.com/ktprograms/0352924ff3898be8b5176cbdb0fd28e9
+[3]: https://gist.github.com/ktprograms/6cfcfd517fff099611cfc333224ad1b4
+[4]: https://gist.github.com/ktprograms/c9df4096eaf53b4e25112b78b0da81bb
