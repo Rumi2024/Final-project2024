@@ -80,7 +80,7 @@ function reqListener() {
 function preload() {
     let req = new XMLHttpRequest();
     req.addEventListener("load", reqListener);
-    req.open("GET","http://192.168.16.87:8080/sajidah/");
+    req.open("GET","/pseudoserver/");
     req.responseType = "json";
     req.send();  
 }
